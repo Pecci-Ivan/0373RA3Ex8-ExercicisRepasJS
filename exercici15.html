@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<textarea id="textArea" rows="5" cols="40"></textarea>
+
+<p id="contador">Caràcters: 0</p>
+
+<script>
+const textarea = document.getElementById("textArea");
+const contador = document.getElementById("contador");
+
+textarea.addEventListener("input", () => {
+    contador.textContent = "Caràcters: " + textarea.value.length;
+});
+</script>
+
+</body>
+</html>
