@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<input type="number" id="files" placeholder="Files">
+<input type="number" id="columnes" placeholder="Columnes">
+
+<button id="crear">Crear Taula</button>
+
+<div id="resultat"></div>
+
+<script>
+document.getElementById("crear").addEventListener("click", () => {
+
+    const files = Number(document.getElementById("files").value);
+    const columnes = Number(document.getElementById("columnes").value);
+
+    let taula = "<table>";
+
+    for (let i = 0; i < files; i++) {
+        taula += "<tr>";
+
+        for (let j = 0; j < columnes; j++) {
+            taula += `<td>${i + 1},${j + 1}</td>`;
+        }
+
+        taula += "</tr>";
+    }
+
+    taula += "</table>";
+
+    document.getElementById("resultat").innerHTML = taula;
+});
+</script>
+
+</body>
+</html>
