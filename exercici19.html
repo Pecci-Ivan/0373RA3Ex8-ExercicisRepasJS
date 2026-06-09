@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #semafor {
+            width: 100px;
+            background: black;
+            padding: 10px;
+        }
+
+        .llum {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: gray;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+
+<div id="semafor">
+    <div class="llum" id="vermell"></div>
+    <div class="llum" id="groc"></div>
+    <div class="llum" id="verd"></div>
+</div>
+
+<button id="canviar">Canviar</button>
+
+<script>
+let estat = 0;
+
+document.getElementById("canviar").addEventListener("click", () => {
+
+    document.getElementById("vermell").style.background = "gray";
+    document.getElementById("groc").style.background = "gray";
+    document.getElementById("verd").style.background = "gray";
+
+    if (estat === 0) {
+        document.getElementById("vermell").style.background = "red";
+    } else if (estat === 1) {
+        document.getElementById("groc").style.background = "yellow";
+    } else {
+        document.getElementById("verd").style.background = "green";
+    }
+
+    estat = (estat + 1) % 3;
+});
+</script>
+
+</body>
+</html>
