@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<ul id="llista">
+    <li>Element 1 <button>Eliminar</button></li>
+    <li>Element 2 <button>Eliminar</button></li>
+    <li>Element 3 <button>Eliminar</button></li>
+    <li>Element 4 <button>Eliminar</button></li>
+    <li>Element 5 <button>Eliminar</button></li>
+</ul>
+
+<script>
+const botons = document.querySelectorAll("#llista button");
+
+botons.forEach(boto => {
+
+    boto.addEventListener("click", () => {
+
+        boto.parentElement.remove();
+
+    });
+
+});
+</script>
+
+</body>
+</html>
