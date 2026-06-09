@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<select id="fonts">
+    <option value="Arial">Arial</option>
+    <option value="'Courier New'">Courier New</option>
+    <option value="'Times New Roman'">Times New Roman</option>
+</select>
+
+<div id="mostra">
+    Aquest és el text de mostra.
+</div>
+
+<script>
+const selector = document.getElementById("fonts");
+const mostra = document.getElementById("mostra");
+
+selector.addEventListener("change", () => {
+    mostra.style.fontFamily = selector.value;
+});
+</script>
+
+</body>
+</html>
