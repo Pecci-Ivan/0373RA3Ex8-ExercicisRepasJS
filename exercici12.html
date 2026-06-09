@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<p id="text">Aquest és un paràgraf de prova.</p>
+
+<button id="mes">+</button>
+<button id="menys">-</button>
+
+<script>
+let mida = 16;
+const paragraf = document.getElementById("text");
+
+document.getElementById("mes").addEventListener("click", () => {
+    mida += 2;
+    paragraf.style.fontSize = mida + "px";
+});
+
+document.getElementById("menys").addEventListener("click", () => {
+    mida -= 2;
+    paragraf.style.fontSize = mida + "px";
+});
+</script>
+
+</body>
+</html>
