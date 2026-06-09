@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<img id="bombeta"
+     src="https://www.w3schools.com/js/pic_bulboff.gif"
+     width="120">
+
+<br><br>
+
+<button id="interruptor">Encendre / Apagar</button>
+
+<script>
+const bombeta = document.getElementById("bombeta");
+let encesa = false;
+
+document.getElementById("interruptor").addEventListener("click", () => {
+
+    if (encesa) {
+        bombeta.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+    } else {
+        bombeta.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+    }
+
+    encesa = !encesa;
+});
+</script>
+
+</body>
+</html>
