@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #quadrat {
+            width: 200px;
+            height: 200px;
+            background-color: steelblue;
+        }
+    </style>
+</head>
+<body>
+
+<div id="quadrat"></div>
+
+<script>
+const quadrat = document.getElementById("quadrat");
+
+quadrat.addEventListener("mouseenter", () => {
+    quadrat.style.backgroundColor = "orange";
+});
+
+quadrat.addEventListener("mouseleave", () => {
+    quadrat.style.backgroundColor = "steelblue";
+});
+</script>
+
+</body>
+</html>
