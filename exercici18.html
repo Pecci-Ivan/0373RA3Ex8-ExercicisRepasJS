@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<input type="text" id="entrada">
+
+<button id="copiar">Copiar</button>
+
+<p>
+    Resultat:
+    <span id="sortida"></span>
+</p>
+
+<script>
+document.getElementById("copiar").addEventListener("click", () => {
+
+    const text = document.getElementById("entrada").value;
+
+    document.getElementById("sortida").textContent = text;
+});
+</script>
+
+</body>
+</html>
